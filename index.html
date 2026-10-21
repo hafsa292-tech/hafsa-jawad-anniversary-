@@ -1,14 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy 1st Engagement Anniversary, Jawad! ❤️</title>
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
-  
+
   <style>
     :root {
       --bg-gradient: linear-gradient(135deg, #2B050B 0%, #4A0E17 50%, #1A0205 100%);
@@ -22,7 +23,11 @@
       --text-muted: #8D7B74;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
@@ -36,8 +41,10 @@
 
     #petalCanvas {
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       pointer-events: none;
       z-index: 5;
     }
@@ -49,7 +56,8 @@
       align-items: center;
       background: rgba(43, 5, 11, 0.85);
       backdrop-filter: blur(12px);
-      position: sticky; top: 0;
+      position: sticky;
+      top: 0;
       z-index: 100;
       border-bottom: 1px solid rgba(229, 152, 155, 0.2);
     }
@@ -88,33 +96,34 @@
       position: relative;
       z-index: 10;
     }
-.profile-container {
-  position: relative;
-  width: 220px;
-  height: 220px;
-  margin: 0 auto 30px;
-}
 
-.profile-frame {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  padding: 6px;
-  background: linear-gradient(135deg, var(--champagne-gold), var(--rose-gold), var(--deep-crimson));
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-  overflow: hidden; /* Photo ko frame se bahar nahi nikalne dega */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .profile-container {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      margin: 0 auto 30px;
+    }
 
-.profile-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Isse poori photo dikhegi, kuch bhi cut nahi hoga */
-  background-color: #2B050B; /* Frame ke andar ka background color */
-  border-radius: 50%;
-}
+    .profile-frame {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, var(--champagne-gold), var(--rose-gold), var(--deep-crimson));
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .profile-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: #2B050B;
+      border-radius: 50%;
+    }
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
@@ -138,6 +147,7 @@
       justify-content: center;
       gap: 15px;
       margin-top: 25px;
+      flex-wrap: wrap;
     }
 
     .time-card {
@@ -261,50 +271,6 @@
       font-weight: bold;
     }
 
-    .coupons-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .coupon-card {
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(10px);
-      border: 2px dashed var(--rose-gold);
-      border-radius: 20px;
-      padding: 28px 20px;
-      text-align: center;
-    }
-
-    .coupon-card h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      color: var(--champagne-gold);
-      margin-bottom: 8px;
-    }
-
-    .coupon-card p {
-      font-size: 0.9rem;
-      color: var(--soft-blush);
-      margin-bottom: 18px;
-    }
-
-    .redeem-btn {
-      background: linear-gradient(45deg, var(--rose-gold), var(--champagne-gold));
-      color: var(--text-dark);
-      border: none;
-      padding: 10px 22px;
-      border-radius: 25px;
-      font-size: 0.88rem;
-      cursor: pointer;
-      font-weight: 700;
-    }
-
-    .redeem-btn.redeemed {
-      background: #4E9F3D;
-      color: white;
-    }
-
     .surprise-box {
       text-align: center;
       margin: 60px 0;
@@ -325,13 +291,16 @@
     .modal {
       display: none;
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background: rgba(15, 2, 5, 0.85);
       backdrop-filter: blur(8px);
       z-index: 1000;
       justify-content: center;
       align-items: center;
+      padding: 20px;
     }
 
     .modal-content {
@@ -358,6 +327,7 @@
       border-radius: 25px;
       font-weight: 700;
       cursor: pointer;
+      margin-top: 20px;
     }
 
     footer {
@@ -373,35 +343,85 @@
       color: var(--champagne-gold);
       font-weight: 600;
     }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .letter-container {
+        padding: 30px 22px;
+      }
+
+      .letter-signature {
+        font-size: 2.2rem;
+      }
+
+      .time-card {
+        padding: 12px;
+        min-width: 68px;
+      }
+
+      .time-card span.num {
+        font-size: 1.6rem;
+      }
+    }
   </style>
 </head>
-<body>
 
+<body>
   <canvas id="petalCanvas"></canvas>
 
   <header>
     <div class="logo">Jawad & Hafsa</div>
-    <button class="music-btn" id="musicToggle">
+    <button class="music-btn" id="musicToggle" type="button">
       <span>🎵 Play Soft Music</span>
     </button>
   </header>
 
+  <!-- music.mp3 ko index.html ke same folder mein rakho -->
+  <audio id="anniversaryMusic" src="./music.mp3" loop preload="none"></audio>
+
   <div class="hero">
     <div class="profile-container">
       <div class="profile-frame">
-        <!-- 📸 MAIN PROFILE IMAGE -->
-        <img src="E:\Day1\jawad.png" alt="jawad" onerror="this.src='jawad.png'">
+        <img src="./jawad.png" alt="Jawad">
       </div>
     </div>
 
     <h1>Happy 1st Engagement Anniversary!</h1>
-    <p class="subtitle">Celebrating 365 days of love, sweet text messages, endless care, and pure happiness with my beloved Jawad.</p>
+    <p class="subtitle">
+      Celebrating 365 days of love, sweet text messages, endless care,
+      and pure happiness with my beloved Jawad.
+    </p>
 
     <div class="countdown-container">
-      <div class="time-card"><span class="num" id="days">00</span><span class="label">Days</span></div>
-      <div class="time-card"><span class="num" id="hours">00</span><span class="label">Hours</span></div>
-      <div class="time-card"><span class="num" id="minutes">00</span><span class="label">Mins</span></div>
-      <div class="time-card"><span class="num" id="seconds">00</span><span class="label">Secs</span></div>
+      <div class="time-card">
+        <span class="num" id="days">00</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="time-card">
+        <span class="num" id="hours">00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="time-card">
+        <span class="num" id="minutes">00</span>
+        <span class="label">Mins</span>
+      </div>
+      <div class="time-card">
+        <span class="num" id="seconds">00</span>
+        <span class="label">Secs</span>
+      </div>
     </div>
   </div>
 
@@ -422,7 +442,7 @@
 
       <div class="gallery-card">
         <div class="img-wrapper">
-         <img src="./chat2.jpeg" alt="Red Rose Care">
+          <img src="./chat2.jpeg" alt="Red Rose Care">
         </div>
         <h3>A Single Rose & Care</h3>
         <p>"Bas thordi care kry iski... Your tender care and love mean the entire world to me."</p>
@@ -447,36 +467,56 @@
     <div class="letter-container">
       <div class="letter-content">
         Dearest Jawad,<br><br>
-        Looking back at this past year since our engagement, my heart is filled with so much gratitude and happiness. From your affectionate "Good afternoon habibti" texts to your gentle reminders to take care of myself, every single moment shows how deeply you love and cherish me.<br><br>
-        You are not just my fiancé; you are my peace, my comfort, and my best friend. On our 1st engagement anniversary, I want to thank you for bringing so much warmth and care into my life.<br><br>
+
+        Looking back at this past year since our engagement, my heart is
+        filled with so much gratitude and happiness. From your affectionate
+        "Good afternoon habibti" texts to your gentle reminders to take care
+        of myself, every single moment shows how deeply you love and cherish me.
+        <br><br>
+
+        You are not just my fiancé; you are my peace, my comfort, and my best
+        friend. On our 1st engagement anniversary, I want to thank you for
+        bringing so much warmth and care into my life.
+        <br><br>
+
         I love you today, tomorrow, and forever.
       </div>
-      <div class="letter-signature">Forever Yours, Hafsa 🧑‍🤝‍🧑❤️</div>
+
+      <div class="letter-signature">Forever Yours, Hafsa ❤️</div>
     </div>
   </section>
 
   <section>
     <div class="section-title">
       <p>Special Gift</p>
-      
+      <h2>A Little Surprise For You</h2>
+    </div>
 
-  <div class="surprise-box">
-    <button class="surprise-btn" onclick="showSurprise()">Tap For A lovely😊 Note ✨</button>
-  </div>
+    <div class="surprise-box">
+      <button class="surprise-btn" onclick="showSurprise()" type="button">
+        Tap For A Lovely 😊 Note ✨
+      </button>
+    </div>
+  </section>
 
   <div class="modal" id="surpriseModal">
     <div class="modal-content">
       <h3>Just For You!</h3>
-      <p id="modalText">"In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."</p>
-      <button class="close-btn" onclick="closeSurprise()">Close with Love ❤️</button>
+      <p id="modalText">
+        In all the world, there is no heart for me like yours.
+      </p>
+      <button class="close-btn" onclick="closeSurprise()" type="button">
+        Close with Love ❤️
+      </button>
     </div>
   </div>
 
   <footer>
-    Made with all my love for <span> Mr.Jawad</span> | 06.11.2026
+    Made with all my love for <span>Mr. Jawad</span> | 06.11.2026
   </footer>
 
   <script>
+    // Countdown
     const targetDate = new Date('November 6, 2026 00:00:00').getTime();
 
     function updateCountdown() {
@@ -485,19 +525,32 @@
 
       if (difference > 0) {
         const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        const hours = Math.floor(
+          (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor(
+          (difference % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const seconds = Math.floor(
+          (difference % (1000 * 60)) / 1000
+        );
 
         document.getElementById('days').innerText = String(days).padStart(2, '0');
         document.getElementById('hours').innerText = String(hours).padStart(2, '0');
         document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
         document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+      } else {
+        document.getElementById('days').innerText = '00';
+        document.getElementById('hours').innerText = '00';
+        document.getElementById('minutes').innerText = '00';
+        document.getElementById('seconds').innerText = '00';
       }
     }
+
     setInterval(updateCountdown, 1000);
     updateCountdown();
 
+    // Falling petals animation
     const canvas = document.getElementById('petalCanvas');
     const ctx = canvas.getContext('2d');
 
@@ -505,6 +558,7 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     }
+
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas();
 
@@ -519,6 +573,7 @@
 
     function drawPetals() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
       petals.forEach(p => {
         ctx.beginPath();
         ctx.fillStyle = `rgba(229, 152, 155, ${p.opacity})`;
@@ -533,64 +588,40 @@
           p.x = Math.random() * canvas.width;
         }
       });
+
       requestAnimationFrame(drawPetals);
     }
+
     drawPetals();
 
-    let audioCtx = null;
-    let isPlaying = false;
-    let timerId = null;
+    // MP3 music: play and pause
+    const music = document.getElementById('anniversaryMusic');
+    const musicButton = document.getElementById('musicToggle');
 
-    document.getElementById('musicToggle').addEventListener('click', function() {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      }
-
-      if (!isPlaying) {
-        isPlaying = true;
-        this.innerHTML = "<span>⏸️ Pause Music</span>";
-        playSoftMelody();
+    musicButton.addEventListener('click', async function () {
+      if (music.paused) {
+        try {
+          await music.play();
+          musicButton.innerHTML = '<span>⏸️ Pause Music</span>';
+        } catch (error) {
+          alert('Music play nahi hui. Check karo ke music.mp3 GitHub repository mein upload hai aur file ka naam bilkul sahi hai.');
+        }
       } else {
-        isPlaying = false;
-        this.innerHTML = "<span>🎵 Play Soft Music</span>";
-        if (timerId) clearInterval(timerId);
+        music.pause();
+        musicButton.innerHTML = '<span>🎵 Play Soft Music</span>';
       }
     });
 
-    function playNote(freq) {
-      if (!audioCtx || !isPlaying) return;
-      const osc = audioCtx.createOscillator();
-      const gain = audioCtx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-      gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 2.2);
-      osc.connect(gain);
-      gain.connect(audioCtx.destination);
-      osc.start();
-      osc.stop(audioCtx.currentTime + 2.2);
-    }
+    music.addEventListener('ended', function () {
+      musicButton.innerHTML = '<span>🎵 Play Soft Music</span>';
+    });
 
-    function playSoftMelody() {
-      const notes = [261.63, 329.63, 392.00, 440.00, 523.25];
-      let idx = 0;
-      timerId = setInterval(() => {
-        if (!isPlaying) return;
-        playNote(notes[idx % notes.length]);
-        idx++;
-      }, 1100);
-    }
-
-    function redeemCoupon(btn) {
-      btn.innerText = "Redeemed! ❤️";
-      btn.classList.add('redeemed');
-    }
-
+    // Surprise notes
     const quotes = [
-      "\"You are my today and all of my tomorrows.\"",
-      "\"Thank you for making my world brighter every single day, Jawad.\"",
-      "\"Every step of this journey with you is my absolute favorite place to be.\"",
-      "\"I love you not only for who you are, but for who I am when I am with you.\""
+      "You are my today and all of my tomorrows. ❤️",
+      "Thank you for making my world brighter every single day, Jawad. 💖",
+      "Every step of this journey with you is my absolute favorite place to be. ✨",
+      "I love you not only for who you are, but for who I am when I am with you. ❤️"
     ];
 
     function showSurprise() {
